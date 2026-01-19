@@ -65,7 +65,7 @@ By default, all language models are included. You can select specific languages 
 budoux = { version = "0.1", default-features = false, features = ["ja"] }
 
 # Include Japanese and Simplified Chinese
-budoux = { version = "0.1", default-features = false, features = ["ja", "zh-hans"] }
+budoux = { version = "0.1", default-features = false, features = ["ja", "zh_hans"] }
 ```
 
 Available features:
@@ -73,8 +73,8 @@ Available features:
 | Feature | Language | Description |
 |---------|----------|-------------|
 | `ja` | Japanese | Japanese model |
-| `zh-hans` | Simplified Chinese | Simplified Chinese model |
-| `zh-hant` | Traditional Chinese | Traditional Chinese model |
+| `zh_hans` | Simplified Chinese | Simplified Chinese model |
+| `zh_hant` | Traditional Chinese | Traditional Chinese model |
 | `th` | Thai | Thai model |
 
 ## Build model
