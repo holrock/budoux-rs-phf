@@ -1,0 +1,14 @@
+[package]
+name = "budoux-rs-pfh"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+phf = { version = "0.13.1", features = ["macros"] }
+
+[features]
+default = ["ja", "th", "zh_hans", "zh_hant"]
+ja =[]
+th = []
+zh_hans = []
+zh_hant =[]

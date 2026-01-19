@@ -1,0 +1,3 @@
+[workspace]
+members = ["lib", "codegen"]
+resolver = "3"
