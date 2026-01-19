@@ -6771,12 +6771,7 @@ static BW3: ::phf::Map<&'static str, i16> = ::phf::Map {
 };
 static TW1: ::phf::Map<&'static str, i16> = ::phf::Map {
     key: 16263683158343804936,
-    disps: &[
-        (15, 17),
-        (1, 0),
-        (11, 2),
-        (2, 13),
-    ],
+    disps: &[(15, 17), (1, 0), (11, 2), (2, 13)],
     entries: &[
         ("百七十", 219),
         ("族情结", 252),
@@ -6800,12 +6795,7 @@ static TW1: ::phf::Map<&'static str, i16> = ::phf::Map {
 };
 static TW2: ::phf::Map<&'static str, i16> = ::phf::Map {
     key: 4203492208743950414,
-    disps: &[
-        (1, 1),
-        (3, 0),
-        (1, 0),
-        (4, 10),
-    ],
+    disps: &[(1, 1), (3, 0), (1, 0), (4, 10)],
     entries: &[
         ("委员会", -1430),
         ("就是说", -4445),
@@ -6828,11 +6818,7 @@ static TW2: ::phf::Map<&'static str, i16> = ::phf::Map {
 };
 static TW3: ::phf::Map<&'static str, i16> = ::phf::Map {
     key: 16287231350648472473,
-    disps: &[
-        (10, 3),
-        (0, 0),
-        (11, 6),
-    ],
+    disps: &[(10, 3), (0, 0), (11, 6)],
     entries: &[
         ("最大的", 1018),
         ("每个人", -44),
@@ -6851,10 +6837,7 @@ static TW3: ::phf::Map<&'static str, i16> = ::phf::Map {
 };
 static TW4: ::phf::Map<&'static str, i16> = ::phf::Map {
     key: 4203492208743950414,
-    disps: &[
-        (3, 0),
-        (6, 5),
-    ],
+    disps: &[(3, 0), (6, 5)],
     entries: &[
         ("来说，", 701),
         ("200", 43),

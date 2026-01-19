@@ -6868,12 +6868,7 @@ static BW3: ::phf::Map<&'static str, i16> = ::phf::Map {
 };
 static TW1: ::phf::Map<&'static str, i16> = ::phf::Map {
     key: 16287231350648472473,
-    disps: &[
-        (1, 11),
-        (17, 17),
-        (5, 12),
-        (5, 0),
-    ],
+    disps: &[(1, 11), (17, 17), (5, 12), (5, 0)],
     entries: &[
         ("一九九", -1376),
         ("百五十", 373),
@@ -6898,11 +6893,7 @@ static TW1: ::phf::Map<&'static str, i16> = ::phf::Map {
 };
 static TW2: ::phf::Map<&'static str, i16> = ::phf::Map {
     key: 15995050791870030928,
-    disps: &[
-        (5, 5),
-        (8, 9),
-        (1, 0),
-    ],
+    disps: &[(5, 5), (8, 9), (1, 0)],
     entries: &[
         ("十五日", -314),
         ("台灣省", -1480),
@@ -6921,10 +6912,7 @@ static TW2: ::phf::Map<&'static str, i16> = ::phf::Map {
 };
 static TW3: ::phf::Map<&'static str, i16> = ::phf::Map {
     key: 16287231350648472473,
-    disps: &[
-        (1, 0),
-        (0, 3),
-    ],
+    disps: &[(1, 0), (0, 3)],
     entries: &[
         ("十分，", -31),
         ("三十一", 219),
@@ -6936,11 +6924,7 @@ static TW3: ::phf::Map<&'static str, i16> = ::phf::Map {
 };
 static TW4: ::phf::Map<&'static str, i16> = ::phf::Map {
     key: 4203492208743950414,
-    disps: &[
-        (4, 0),
-        (3, 3),
-        (9, 0),
-    ],
+    disps: &[(4, 0), (3, 3), (9, 0)],
     entries: &[
         ("方面，", 260),
         ("民進黨", 729),

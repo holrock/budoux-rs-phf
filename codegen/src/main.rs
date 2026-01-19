@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 use std::env;
-use std::fs::{File};
+use std::fs::File;
 use std::io::{BufReader, BufWriter, Write};
 use std::path::Path;
 
@@ -31,7 +31,7 @@ fn write_code(lang: &str, val: &HashMap<String, HashMap<String, i32>>, output_di
 
     write!(
         &mut out,
-r#"use super::model::*;
+        r#"use super::model::*;
 
 pub fn new() -> Model {{
     Model {{
@@ -52,18 +52,22 @@ pub fn new() -> Model {{
     }}
 }}
 "#,
-        total_score).unwrap();
+        total_score
+    )
+    .unwrap();
 
-    for n in vec![ "UW1", "UW2", "UW3", "UW4", "UW5", "UW6", "BW1", "BW2", "BW3", "TW1", "TW2", "TW3", "TW4", ] {
+    for n in vec![
+        "UW1", "UW2", "UW3", "UW4", "UW5", "UW6", "BW1", "BW2", "BW3", "TW1", "TW2", "TW3", "TW4",
+    ] {
         write_map(&mut out, n, val.get(n).unwrap());
     }
 }
 
-fn write_map(mut out: impl Write , name: &str, val: &HashMap<String, i32>) {
+fn write_map(mut out: impl Write, name: &str, val: &HashMap<String, i32>) {
     let mut map = phf_codegen::Map::new();
-    let m = val.iter().fold(
-        &mut map,
-        |acc, (k, v)| acc.entry(k, v.to_string()));
+    let m = val
+        .iter()
+        .fold(&mut map, |acc, (k, v)| acc.entry(k, v.to_string()));
     write!(
         out,
         "static {}: ::phf::Map<&'static str, i16> = {};\n",
