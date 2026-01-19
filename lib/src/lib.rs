@@ -7,4 +7,6 @@ mod model_th;
 mod model_zh_hans;
 #[cfg(feature = "zh_hant")]
 mod model_zh_hant;
-pub mod parser;
+
+mod parser;
+pub use parser::Parser;
