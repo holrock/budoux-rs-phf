@@ -15,6 +15,10 @@ pub struct Parser {
 }
 
 impl Parser {
+    pub fn new(model: Model) -> Parser {
+        Self { model }
+    }
+
     #[cfg(feature = "ja")]
     pub fn japanese_parser() -> Parser {
         Parser {
@@ -239,5 +243,34 @@ mod tests {
         let parser_th = Parser::thai_parser();
         let r = parser_th.parse("วันนี้อากาศดี");
         assert_eq!(r, vec!["วัน", "นี้", "อากาศ", "ดี"]);
+    }
+
+    #[test]
+    fn test_custom_model() {
+        use crate::model::ScoreMap;
+        static F: ScoreMap = ::phf::Map {
+            key: 0,
+            disps: &[],
+            entries: &[],
+        };
+        let model = Model {
+            total_score: 0,
+            uw1: &F,
+            uw2: &F,
+            uw3: &F,
+            uw4: &F,
+            uw5: &F,
+            uw6: &F,
+            bw1: &F,
+            bw2: &F,
+            bw3: &F,
+            tw1: &F,
+            tw2: &F,
+            tw3: &F,
+            tw4: &F,
+        };
+        let parser = Parser::new(model);
+        let r = parser.parse("今日は天気です。");
+        assert_eq!(r, vec!["今日は天気です。"]);
     }
 }

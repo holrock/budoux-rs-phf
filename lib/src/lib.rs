@@ -1,4 +1,5 @@
 mod model;
+pub use model::{Model, ScoreMap};
 #[cfg(feature = "ja")]
 mod model_ja;
 #[cfg(feature = "ja_knbc")]
