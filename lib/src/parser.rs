@@ -11,7 +11,7 @@ use crate::model_zh_hans;
 use crate::model_zh_hant;
 
 pub struct Parser {
-    model: Model,
+    pub model: Model,
 }
 
 impl Parser {
