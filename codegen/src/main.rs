@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 use std::env;
-use std::fs::File;
+use std::fs::{File, read_dir};
 use std::io::{BufReader, BufWriter, Write};
 use std::path::Path;
 
@@ -85,14 +85,10 @@ fn main() {
     }
     let model_dir = Path::new(&args[1]);
     let output_dir = Path::new(&args[2]);
-    for n in [
-        "ja.json",
-        "ja_knbc.json",
-        "th.json",
-        "zh-hans.json",
-        "zh-hant.json",
-    ] {
-        let f = model_dir.join(n);
-        gen_code(&f, &output_dir);
+    for f in read_dir(model_dir).unwrap() {
+        let f = f.unwrap().path();
+        if f.extension().is_some_and(|s| s == "json") {
+            gen_code(&f, &output_dir);
+        }
     }
 }
