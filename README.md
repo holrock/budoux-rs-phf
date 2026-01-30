@@ -85,6 +85,7 @@ static UW2: ScoureMap = phf::Map { ...  };
 fn main() {
     let PARSER: Parser = Parser { model: MY_MODEL };
 }
+```
 
 
 ## Feature Flags
