@@ -56,6 +56,37 @@ fn main() {
 }
 ```
 
+### Custom Model
+
+```rust
+use budoux_phf_rs::{Model, Parser, ScoreMap};
+
+// You can use `codegen` to convert from json to a model.
+const MY_MODEL: Mode = Model {
+    total_score: 2552,
+    uw1: &UW1,
+    uw2: &UW2,
+    uw3: &UW3,
+    uw4: &UW4,
+    uw5: &UW5,
+    uw6: &UW6,
+    bw1: &BW1,
+    bw2: &BW2,
+    bw3: &BW3,
+    tw1: &TW1,
+    tw2: &TW2,
+    tw3: &TW3,
+    tw4: &TW4,
+};
+static UW1: ScoureMap = phf::Map { ...  };
+static UW2: ScoureMap = phf::Map { ...  };
+...
+
+fn main() {
+    let PARSER: Parser = Parser { model: MY_MODEL };
+}
+
+
 ## Feature Flags
 
 By default, all language models are included. You can select specific languages to reduce binary size:
