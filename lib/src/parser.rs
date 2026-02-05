@@ -131,7 +131,7 @@ impl Parser {
                 start = ci[i];
             }
         }
-        if start < ci[len - 1] {
+        if start <= ci[len - 1] {
             chunks.push(&sentence[start..]);
         }
         chunks
@@ -215,6 +215,7 @@ mod tests {
             "コントロールできない▁ほど▁感情移入してしまう",
             "いつも▁甘えがちに▁なる",
             "存在が▁浮かび▁上がった。",
+            "雀の▁宿"
         ];
         let p = Parser::japanese_parser();
         for d in td {
